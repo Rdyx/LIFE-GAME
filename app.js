@@ -33,10 +33,6 @@ $('#content').html(html);
 function creation(nombre, couleur) {
     //On initialise j à 0
     var j = 0;
-    //On set le random min
-    var min = 0;
-    //Le random max
-    var max = 100;
     //On lance la boucle, tant que j est < à nombre, la boucle s'excécute
     while (j < nombre) {
         //On insert une valeur random dans randomz à chaque début de boucle
@@ -48,26 +44,20 @@ function creation(nombre, couleur) {
             if ($('#num0' + randomz).html() == 0) {
                 $('#num0' + randomz).html(couleur);
                 j++;
-            } 
-            //Si la case est déjà pleine, on relance la fonction sans changer ses paramètres
-            else {
-                creation();
-            }
-        //Si randomz > 10, on push la couleur dans une case #num
-        //Le reste du code est le même que pour randomz < 10
+            };
+            //Si randomz > 10, on push la couleur dans une case #num
+            //Le reste du code est le même que pour randomz < 10
         } else {
             if ($('#num' + randomz).html() == 0) {
                 $('#num' + randomz).html(couleur);
                 j++;
-            } else {
-                creation();
-            }
+            };
         }
     }
 }
 
-creation(5, 'rouge');
-creation(5, 'noir');
+creation(10, 'rouge');
+creation(10, 'noir');
 // function getRandomInt(min, max) {
 //     min = Math.ceil(min);
 //     max = Math.floor(max);
