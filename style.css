@@ -1,4 +1,10 @@
 tr, td{
     border-collapse: collapse;
     border: 1px solid black;
+    height: 20px;
+    width: 50px;
+}
+
+.inputsDiv {
+    margin: 5% 0 5% 0;
 }
