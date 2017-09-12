@@ -44,11 +44,12 @@ var tableau = []
 var row = 10;
 var col = 10;
 var html;
+var randomz = Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0))) + Math.ceil(0);
 
 for (var i = 0; i < row; i++) {
     html += '<tr>'
     for (var j = 0; j < col; j++) {
-        html += '<td id="' + i + '' + j + '">0</td>';
+        html += '<td id="num' + i + '' + j + '">0</td>';
         tableau.push(i + "" + j)
     }
     html += '</tr>'
@@ -56,11 +57,25 @@ for (var i = 0; i < row; i++) {
 
 $('#content').html(html);
 
-setInterval(function random(min, max) {
-    min = Math.ceil(0);
-    max = Math.floor(100);
-    $('#' + (Math.floor(Math.random() * (max - min)) + min)).html('1');
-}, 50);
+//Déplacements
+// setInterval(function random(min, max) {
+//     min = 0;
+//     max = 100;
+//     randomz = Math.floor(Math.random() * (max - min)) + min;
+//     if(randomz < 10){
+//         $('#num0' + randomz).html('1');
+//     } else {
+//     $('#num' + randomz).html('1');
+//     }
+// }, 500);
+
+// function creation(nombre){
+//     for(var i = 0; i < nombre; i++){
+//         console.log(i)
+//     }
+// }
+
+// creation(2)
 
 // function getRandomInt(min, max) {
 //     min = Math.ceil(min);
